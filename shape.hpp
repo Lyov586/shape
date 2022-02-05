@@ -24,7 +24,37 @@ class rectangle: public shape
 		rectangle(int a, int b);
 		rectangle(const rectangle& c);
 		rectangle& operator=(const rectangle& b);
+		bool operator==(const rectangle& b);
 	public:
 		int get_area();
 };
+
+
+class triangle: public shape
+{
+	public:
+		triangle();
+		triangle(int a, int b);
+		triangle(const triangle& c);
+		triangle& operator=(const triangle& b);
+		bool operator==(const triangle& b);
+	public:
+		int get_area();
+};
+
+class circle: public shape
+{
+	private:
+		int radius;
+	public:
+		circle();
+		circle(int a);
+		circle(const circle& c);
+		circle& operator=(const circle& b);
+		bool operator==(const circle& b);
+	public:
+		int get_radius();
+		int get_area();
+};
+
 #endif
